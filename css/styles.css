@@ -134,11 +134,9 @@ table{
     transform: translateY(4px);
 }
 @media screen and (max-width: 768px) {
-    #contenedor_conductor{
-        text-align: center;
-    }
-    #contenedor_dat_vehiculo{
-        text-align: center;
+    .padding_input input{
+        margin-left: 25%;
+        margin-right: 25%;
     }
     /* Para pantallas pequeñas (por ejemplo, móviles), cambia a un solo elemento por fila */
     .conductor {
