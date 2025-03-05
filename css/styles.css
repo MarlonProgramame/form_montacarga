@@ -36,29 +36,27 @@ form{
     flex-wrap: wrap; /* Esto permitirá que los elementos se ajusten en varias filas */
     justify-content: space-between; /* Asegura que haya espacio entre los elementos */
     gap: 1%; /* Espacio entre los elementos */
-    margin: 0 auto;
     padding: 7%; /* Añade algo de espacio alrededor */
     box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño total */
 }
 .padding_titulos{
-    padding-bottom: 18px;
-    padding-right: 18px;
+    padding: 5px;
+    margin-left: 15%;
+    margin-right: 15%;
+    background-color:#b83434d8;
+    border-radius: 8px;
+    color: white;
+    margin-bottom: 15px;
 }
-.conductor {
+.conductor{
+    text-align: center;
     flex: 1 1 calc(50% - 20px); /* Esto asegura que cada "conductor" ocupe el 50% del espacio, con espacio entre ellos */
     box-sizing: border-box;
 }
-.padding_titulos{
-    padding-bottom: 18px;
-    padding-right: 18px;
-}
+
 .padding_input{
     padding-top: 3%;
     padding-bottom: 6%;
-}
-.padding_titulos{
-    padding-bottom: 18px;
-    padding-right: 18px;
 }
 .padding_2_titulo{
     text-align: center;
@@ -100,6 +98,7 @@ table{
     box-sizing: border-box;
 }
 .division_vehiculo {
+    text-align: center;
     flex: 1 1 45%; /* Cada sección ocupará el 45% del ancho del contenedor */
     box-sizing: border-box;
 }  
