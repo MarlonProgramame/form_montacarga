@@ -134,9 +134,12 @@ table{
     transform: translateY(4px);
 }
 @media screen and (max-width: 768px) {
-    .padding_input input{
-        margin-left: 25%;
-        margin-right: 25%;
+    .padding_input{
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+    .padding_input input, date, select{
+        width: 250px;
     }
     /* Para pantallas pequeñas (por ejemplo, móviles), cambia a un solo elemento por fila */
     .conductor {
