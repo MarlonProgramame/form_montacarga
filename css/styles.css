@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     font-family: Poppins;
+    font-size: 14px;
 }
 body{
     background-color: rgb(216, 216, 216);
@@ -21,7 +22,6 @@ img{
 }
 form{
     width: auto;
-    font-size: 120%;
     background-color: #ffffff;
     margin-left: 15%;
     margin-right: 15%;
@@ -76,14 +76,12 @@ form{
 input {
     border-color: black;
     border-radius: 5px;
-    font-size:16px;
     padding: 1px;
     background-color: #d6d6d6;
 }
 select{
     border-color: black;
     border-radius: 5px;
-    font-size: medium;
     background-color: #d6d6d6;
 }
 th, td{
@@ -125,7 +123,6 @@ table{
     cursor: pointer;
     color: white;
     border-radius: 8px;
-    font-size: 75%;
     font-family:sans-serif;
     font-weight: bold;
     text-decoration: none;
