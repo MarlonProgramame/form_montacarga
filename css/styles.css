@@ -1,0 +1,154 @@
+
+/*Selector Universal*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    background-color: rgb(216, 216, 216);
+}
+header{
+    padding: 20px;
+    margin: 7px;
+    background-color: #b60723;
+    color: white;
+    margin-bottom: 5px;
+    text-align: center;
+}
+img{
+    max-width: 100%;
+}
+form{
+    width: auto;
+    font-size: 120%;
+    background-color: #ffffff;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+#cont_indicaciones{
+    text-align: center;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5% ;
+}
+#contenedor_conductor {
+    display: flex;
+    flex-wrap: wrap; /* Esto permitirá que los elementos se ajusten en varias filas */
+    justify-content: space-between; /* Asegura que haya espacio entre los elementos */
+    gap: 1%; /* Espacio entre los elementos */
+    margin: 0 auto;
+    padding: 7%; /* Añade algo de espacio alrededor */
+    box-sizing: border-box; /* Asegura que padding y border no afecten el tamaño total */
+}
+.padding_titulos{
+    padding-bottom: 18px;
+    padding-right: 18px;
+}
+.conductor {
+    flex: 1 1 calc(50% - 20px); /* Esto asegura que cada "conductor" ocupe el 50% del espacio, con espacio entre ellos */
+    box-sizing: border-box;
+}
+.padding_titulos{
+    padding-bottom: 18px;
+    padding-right: 18px;
+}
+.padding_input{
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 6%;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.padding_titulos{
+    padding-bottom: 18px;
+    padding-right: 18px;
+}
+.padding_2_titulo{
+    text-align: center;
+    padding: 10px;
+}
+.input_2{
+    padding: 20px;
+    text-align: center;
+}
+input {
+    border-color: black;
+    border-radius: 5px;
+    font-size:16px;
+    padding: 1px;
+    background-color: #d6d6d6;
+}
+select{
+    border-color: black;
+    border-radius: 5px;
+    font-size: medium;
+    background-color: #d6d6d6;
+}
+th, td{
+    width: auto;
+    padding: 5px;
+    border-bottom: 1px solid #999595;
+}
+table{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+    border-color: #ffffff;
+}
+#contenedor_dat_vehiculo{
+    padding: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+    box-sizing: border-box;
+}
+.division_vehiculo {
+    flex: 1 1 45%; /* Cada sección ocupará el 45% del ancho del contenedor */
+    box-sizing: border-box;
+}  
+.contenedor_tablas{
+    padding: 20px;
+}
+.titulo_tablas{
+    text-align: center;
+}
+#contenedor_boton{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+#boton_form{
+    border: none;
+    cursor: pointer;
+    color: white;
+    border-radius: 8px;
+    font-size: 75%;
+    font-family:sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 2%;
+    background-color: #4f51d6;
+}
+#boton_form:hover{
+    background-color: #4f51d6;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+@media screen and (max-width: 768px) {
+    /* Para pantallas pequeñas (por ejemplo, móviles), cambia a un solo elemento por fila */
+    .conductor {
+        flex: 1 1 100%; /* Cada conductor ocupará el 100% del ancho en pantallas pequeñas */
+    }
+    .division_vehiculo {
+        flex: 1 1 100%; /* Cada sección ocupará el 45% del ancho del contenedor */
+    }
+    .titulo_tablas{
+        padding: 20px;
+    }
+    table {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulario Montacargas Nurueña S.A.S</title>
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+        <!--Encabezado-->
+    <header>
+        <img src="images/encabezado_img.png" alt="Logo Nurueña S.A.S" title="Logo Nurueña S.A.S">
+        <br>
+        <br>
+        <!--Titulo Principal de la Pagina-->
+        <h1>Formulario Diario de Inspección Preoperativa de Montacargas.</h1>
+        <br>
+        <!--Subtitulo-->
+        <h3>Inspección y revisión preoperativa de los vehículos antes de iniciar la operación diaria segun las normativas legales vigentes.</h3>
+        <br>
+        <br/>
+    </header>
+    <!--Contenedor Indicaciones.-->
+    <div id="cont_indicaciones">
+        <!--Subtitulo de Indicaciones-->
+        <h3 style="color: rgb(255, 0, 0);">Indicaciones</h3>
+        <br>
+        <!--Parrafo con las indicaciones-->
+        <p>
+            - Verifique la información detenidamente antes de enviar el formulario.<br/><br/>
+            - El simbolo <span style="color: red;">*</span> indica que son campos que se deben llenar obligatoriamente.<br/><br/>
+            - Los campos que se encuentren con estado <span style="color:red;">inactivo</span> usted podra modificarlos para actualizarlos.
+        </p>
+        <br/>
+        <hr/>
+        <br>
+    </div>
+    <body>
+        <main>
+            <form>
+                <!--Section de Datos de la Persona que Realiza el Formulario.-->
+                <section id="contenedor_conductor">
+                    <div class="conductor">
+                        <div class="padding_titulos">
+                            <!--Subtitulo de Datos de la Persona que Realiza el Formulario.-->
+                            <h3>Conductor Responsable del Formulario</h3>
+                        </div>
+                        <!--Texto de Campo de Entrada.-->
+                        <label for="id_cond">Ingrese su Numero de Documento <span style="color:red;">*</span></label>
+                        <!--Espacio para Casilla de Ingreso de Datos para el Usuario de Documento.-->
+                        <br>
+                        <div class="padding_input"> 
+                            <input id="id_cond" name="id_cond" title="Complete este Campo." type="number" min="100000" max="999999999999" required>
+                            <br/>
+                        </div>
+                        <!--Texto de Campo de Entrada-->
+                        <label for="estado_cond">Estado del Conductor:</label>
+                        <div class="padding_input">
+                            <!--Casilla de Estado.-->
+                            <input id="estado_cond" name="estado_cond" title="Estado." type="text" readonly>
+                            <!--Salto de Linea-->
+                            <br/>
+                        </div>
+                        <!--Texto de Campo de Entrada de Apellidos.-->
+                        <label for="apell_cond">Apellidos:</label>
+                        <br>
+                        <div class="padding_input">
+                            <!--Casilla donde se va Consultar y se va Autocompletar los Apellidos-->
+                            <input id="apell_cond" name="apell_cond" type="text" readonly>
+                            <!--Salto de Linea-->
+                            <br>
+                        </div>
+                        <!--Texto de Campo de Entrada de Nombres-->
+                        <label for="nom_cond">Nombres:</label>
+                        <br>
+                        <div style="padding-bottom: 15%;padding-top: 3%;">
+                            <!--Casilla donde se va Consultar y se va Autocompletar los Nombres.-->
+                            <input id="nom_cond" name="nom_cond" type="text" readonly>
+                            <!--Salto de Linea-->
+                            <br/>
+                        </div>
+                    </div>
+                    <div class="conductor">
+                        <div class="padding_titulos">
+                            <!--Subtitulo de Datos de la Persona que Realiza el Formulario.-->
+                            <h3>Licencia del Conductor</h3>
+                        </div>
+                        <label for="est_lic">Estado de la Licencia:</label>
+                        <br>
+                        <div class="padding_input">
+                            <!--Casilla de Estado.-->
+                            <input id="est_lic" name="est_lic" title="Estado." type="text" readonly>
+                            <!--Salto de Linea-->
+                            <br/>
+                        </div>
+                        <!--Texto de Campo de Entrada .-->
+                        <label for="cat_lic" >Categoria de la Licencia de Conduccion:</label>
+                        <br>
+                        <div class="padding_input">
+                            <!--Casilla de Categoria de la Licencia.-->
+                            <select name="cat_lic" id="cat_lic" required>
+                                <!--Opciones de la Casilla desplegable.-->
+                                <option value="">Seleccione una Opción</option>
+                                <option value="a1">A1</option>
+                                <option value="a2">A2</OPtion>
+                                <option value="b1">B1</option>
+                                <option value="b2">B2</option>
+                                <option value="b3">B3</option>
+                                <option value="c1">C1</option>
+                                <option value="c2">C2</option>
+                                <option value="c3">C3</option>
+                            </select>
+                            <br/>
+                        </div>
+                        <!--Texto de Campo de Entrada.-->   
+                        <label for="vig_lic">Vigencia de la Licencia de Conducción:</label>
+                        <br>
+                        <div class="padding_input">
+                            <!--Casilla donde se va Consultar y se va Autocompletar la Fecha de Fecha de Vencimiento de la Licencia-->
+                            <input id="vig_lic" name="vig_lic" type="date" required>
+                            <!--Salto de Linea.-->
+                            <br>
+                        </div>
+                        <div class="padding_titulos">
+                            <!--Titulo de Curso de Operación para Montacarga.-->
+                            <h3>Curso de Operación para Montacarga</h3>
+                        </div>
+                        <!--Texto de Fecha de Vigencia de Curso de Montacarga-->
+                        <label for="vig_curso_montacarga">Vigencia</label>
+                        <br>
+                        <div class="padding_input">
+                            <!--Input de Fecha de Vigencia de Curso de Montacarga-->
+                            <input type="date" id="vig_curso_montacarga" name="vig_curso_montacarga" required>
+                        </div>
+                    </div>
+                </section>
+                <!--Linea de Separacion.-->
+                <hr/>
+                <!--Section de Datos del Vehiculo.-->
+                <section id="contenedor_dat_vehiculo">
+                    <div class="division_vehiculo">
+                        <div class="padding_titulos">
+                            <h3>Datos del Vehiculo</h3>
+                        </div>
+                        <!-- Texto de Campo de Entrada -->
+                        <label for="placa">Placa del Vehiculo <span style="color:red;">*</span></label>
+                        <br>
+                        <div class="padding_input">
+                            <!-- Casilla Desplegable de Placa -->
+                            <select id="placa" name="placa" required>
+                                <option value="">Seleccione una Opción</option>
+                                <option value="wlm461">AAA00A</option>
+                                <option value="sor737">AAA00B</option>
+                                <option value="eqq163">AAA00C</option>
+                            </select>
+                            <br/>
+                        </div>
+                        <label for="est_veh">Estado del Vehiculo:</label>
+                        <br>
+                        <div class="padding_input">
+                            <!-- Campo de Estado del Vehiculo.-->
+                            <input id="est_veh" name="est_veh" title="Estado del Vehiculo." type="text" readonly>
+                            <!--Salto de Linea.-->
+                            <br>
+                        </div>
+                        <label for="kilometraje">Kilometraje Actual del Vehiculo <span style="color:red;">*</span></label>
+                        <br>
+                        <div class="padding_input">
+                            <!-- Campo de Kilometraje -->
+                            <input id="kilometraje" name="kilometraje" title="Complete este Campo." type="number" min="0" max="999999" required>
+                            <br/>
+                        </div>
+                        <label for="niv_combustible">Nivel de Combustible <span style="color: red;">*</span></label>
+                        <br>
+                        <div class="padding_input">
+                            <select name="niv_combustible" id="niv_combustible" required>
+                                <option value="">Seleccione una Opción</option>
+                                <option value="tanq_lleno">Tanque completamente lleno</option>
+                                <option value="tanq_medio_lleno">Tanque parcialmente lleno</option>
+                                <option value="tanq_medio">Tanque medio</option>
+                                <option value="tanq_medio_bajo">Tanque medio bajo</option>
+                                <option value="tanq_bajo">Tanque con bajo nivel</option>
+                                <option value="tanq_vacio">Tanque vacío</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="division_vehiculo">
+                        <label for="venc_soat">Fecha Vencimiento del SOAT:</label>
+                        <br>
+                        <div class="padding_input">
+                            <input id="venc_soat" name="venc_soat" type="date" readonly>
+                            <br>
+                        </div>
+                        <label for="ven_tecno">Fecha Vencimiento de Tecnomecanica:</label>
+                        <br>
+                        <div class="padding_input">
+                            <input id="ven_tecno" name="ven_tecno" type="date" readonly>
+                            <br>
+                        </div>
+                        <label for="vig_poliza">Vigencia de Poliza (Seguro):</label>
+                        <br>
+                        <div class="padding_input">
+                            <input id="vig_poliza" name="vig_poliza" type="date" readonly>
+                            <br>
+                        </div>   
+                    </div>
+                </section>
+                <hr>
+                <!--Sección de Turno.-->
+                <section class="contenedor_dat_vehiculo">
+                    <div class="padding_2_titulo">
+                        <!--Titulo de Turno.-->
+                        <h3>Turno <span style="color: red;">*</span></h3>
+                    </div>
+                    <div class="input_2">
+                        <!--Seleccion de Turno-->
+                        <select name="turno" id="turno" required>
+                            <option value="">Seleccione una Opción</option>
+                            <option value="turno_mañana">Mañana</option>
+                            <option value="turno_tarde">Tarde</option>
+                        </select>
+                    </div>
+                    <hr>
+                </section>
+                <!--Seccion de Horometro.-->
+                <section class="contenedor_dat_vehiculo">
+                    <div class="padding_2_titulo">
+                        <!--Titulo de Horometro.-->
+                        <h3>Horometro <span style="color: red;">*</span></h3>
+                    </div>
+                    <div class="input_2">
+                        <!--Campo de Horometro.-->
+                        <input type="number" id="horometro" name="horometro" title="Complete este Campo." placeholder="Horas" min="0" max="999999" required>
+                    </div>
+                    <hr>
+                </section>
+                <!--Sección de Vigencia de Exntintor.-->
+                <section class="contenedor_dat_vehiculo">
+                    <div class="padding_2_titulo">
+                        <!--Titulo de Extintor.-->
+                        <h3>Extintor</h3>
+                        <!--Texto de Videncia de Exntintor.-->
+                        <label for="vig_extintor">Vigencia</label>
+                    </div>  
+                    <div class="input_2">
+                        <!--Fecha de Vigencia de Extintor.-->
+                        <input type="date" id="vig vig_extintor" name="vig_extintor" required>
+                    </div>
+                    <hr>
+                </section>
+                <!--Sección de Aceite.-->
+                <!--Titulo de Aceite.-->
+                <br>
+                <h3 class="titulo_tablas">Aceite</h3>
+                <section class="contenedor_tablas">
+                        <!--Tabla de Aceite.-->
+                        <table border="1">
+                            <!--Fila Encabezado de la Tabla.-->
+                            <tr>
+                                <!--Encabezado de la Tabla.-->
+                                <th>CONCEPTO</th>
+                                <th>BUENO</th>
+                                <th>MALO</th>
+                                <th>NO APLICA</th>
+                            </tr>
+                            <!--Fila Estado del Aceite.-->
+                            <tr>
+                                <!--Casilla Estado del Aceite.-->
+                                <td><label>Estado del Aceite</label></td>
+                                <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                                <td><input type="radio" id="estado_aceite_bueno" value="bueno" name="estado_aceite" required></td>
+                                <td><input type="radio" id="estado_aceite_malo" value="malo" name="estado_aceite" required></td>
+                                <td><input type="radio" id="estado_aceite_no_aplica" value="no_aplica" name="estado_aceite" required></td>
+                            </tr>
+                            <!--Fila Nivel del Aceite-->
+                            <tr>
+                                <!--Casilla Nivel del Aceite-->
+                                <td><label>Nivel del Aceite</label></td>
+                                <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                                <td><input type="radio" id="estado_nivel_aceite_bueno" value="bueno" name="estado_nivel_aceite" required></td>
+                                <td><input type="radio" id="estado_nivel_aceite_malo" value="malo" name="estado_nivel_aceite" required></td>
+                                <td><input type="radio" id="estado_nivel_aceite_no_aplica" value="no_aplica" name="estado_nivel_aceite" required></td>
+                            </tr>
+                            <!--Fila Fuga Aceite.-->
+                            <tr>
+                                <!--Casilla Fuga Aceite.-->
+                                <td><label>Fuga Aceite</label></td>
+                                <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                                <td><input type="radio" id="estado_fuga_aceite_bueno" value="bueno" name="estado_fuga_aceite" required></td>
+                                <td><input type="radio" id="estado_fuga_aceite_malo" value="malo" name="estado_fuga_aceite" required></td>
+                                <td><input type="radio" id="estado_fuga_aceite_no_aplica" value="no_aplica" name="estado_fuga_aceite" required></td>
+                            </tr>
+                        </table>
+                    </div>
+                </section>
+                <br>
+                <!--Titulo Estado de Presentación.-->
+                <h3 class="titulo_tablas">Estado de Presentación</h3>
+                <!--Sección Estado de Presentación.-->
+                <section class="contenedor_tablas">
+                    <br>
+                    <!--Tabla de Estado de Presentación.-->
+                    <table border="1">
+                        <!--Fila de Encabezado.-->
+                        <tr>
+                            <!--Encabezado Tabla.-->
+                            <th>CONCEPTO</th>
+                            <th>BUENO</th>
+                            <th>MALO</th>
+                            <th>NO APLICA</th>
+                        </tr>
+                        <!--Fila de Aseo.-->
+                        <tr>
+                            <!--Casilla de Aseo.-->
+                            <td><label">Aseo</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_aseo_bueno" value="bueno" name="estado_aseo" required></td>
+                            <td><input type="radio" id="estado_aseo_malo" value="malo" name="estado_aseo" required></td>
+                            <td><input type="radio" id="estado_aseo_no_aplica" value="no_aplica" name="estado_aseo" required></td>
+                        </tr>
+                        <!--Fila de Guardas.-->
+                        <tr>
+                            <!--Casilla de Guardas.-->
+                            <td><label>Guardas</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_guardas_bueno" value="bueno" name="estado_guardas" required></td>
+                            <td><input type="radio" id="estado_guardas_malo" value="malo" name="estado_guardas" required></td>
+                            <td><input type="radio" id="estado_guardas_no_aplica" value="no_aplica" name="estado_guardas" required></td>
+                        </tr>
+                        <!--Fila de Tapas Plasticas.-->
+                        <tr>
+                            <!--Casilla de Tapas Plasticas.-->
+                            <td><label>Tapas Plasticas</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_tapas_bueno" value="bueno" name="estado_tapas" required></td>
+                            <td><input type="radio" id="estado_tapas_malo" value="malo" name="estado_tapas" required></td>
+                            <td><input type="radio" id="estado_tapas_no_aplica" value="no_aplica" name="estado_tapas" required></td>
+                        </tr>
+                        <!--Fila de Pintura.-->
+                        <tr>
+                            <!--Casilla de Pintura.-->
+                            <td><label>Pintura</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_pintura_bueno" value="bueno" name="estado_pintura" required></td>
+                            <td><input type="radio" id="estado_pintura_malo" value="malo" name="estado_pintura" required></td>
+                            <td><input type="radio" id="estado_pintura_no_aplica" value="no_aplica" name="estado_pintura" required></td>
+                        </tr>
+                        <!--Fila de Rejilla Metalica.-->
+                        <tr>
+                            <!--Casilla de Rejilla Metalica.-->
+                            <td><label>Rejilla Metalica</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_rejilla_bueno" value="bueno" name="estado_rejilla" required></td>
+                            <td><input type="radio" id="estado_rejilla_malo" value="malo" name="estado_rejilla" required></td>
+                            <td><input type="radio" id="estado_rejilla_no_aplica" value="no_aplica" name="estado_rejilla" required></td>
+                        </tr>
+                        <!--Fila de Pantalla de Acrilico.-->
+                        <tr>
+                            <!--Casilla de Pantalla de Acrilico.-->
+                            <td><label>Pantalla de Acrilico</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_pantalla_acrilico_bueno" value="bueno" name="estado_pantalla_acrilico" required></td>
+                            <td><input type="radio" id="estado_pantalla_acrilico_malo" value="malo" name="estado_pantalla_acrilico" required></td>
+                            <td><input type="radio" id="estado_pantalla_acrilico_no_aplica" value="no_aplica" name="estado_pantalla_acrilico" required></td>
+                        </tr>
+                        <!--Fila de Piso.-->
+                        <tr>
+                            <!--Casilla de Piso.-->
+                            <td><label>Piso</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_piso_bueno" value="bueno" name="estado_piso" required></td>
+                            <td><input type="radio" id="estado_piso_malo" value="malo" name="estado_piso" required></td>
+                            <td><input type="radio" id="estado_piso_no_aplica" value="no_aplica" name="estado_piso" required></td>
+                        </tr>
+                        <!--Fila de Espaldar.-->
+                        <tr>
+                            <!--Casilla de Espaldar.-->
+                            <td><label>Espaldar</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_espaldar_bueno" value="bueno" name="estado_espaldar" required></td>
+                            <td><input type="radio" id="estado_espaldar_malo" value="malo" name="estado_espaldar" required></td>
+                            <td><input type="radio" id="estado_espaldar_no_aplica" value="no_aplica" name="estado_espaldar" required></td>
+                        </tr>
+                        <!--Fila de Timon.-->   
+                        <tr>
+                            <!--Casilla de Timon.-->
+                            <td><label>Timon</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_timon_bueno" value="bueno" name="estado_timon" required></td>
+                            <td><input type="radio" id="estado_timon_malo" value="malo" name="estado_timon" required></td>
+                            <td><input type="radio" id="estado_timon_no_aplica" value="no_aplica" name="estado_timon" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                <!--Titulo Sistema Electrico.-->
+                <h3 class="titulo_tablas">Sistema Electrico</h3>
+                </section>
+                <!--Sección de Sistema Eléctrico.-->
+                <section class="contenedor_tablas">
+                    <!--Tabla de Sistema Electrico.-->
+                    <table border="1">
+                        <!--Fila de Encabezado.-->
+                        <tr>
+                            <!--Encabezado de la tabla.-->
+                            <th>CONCEPTO</th>
+                            <th>BUENO</th>
+                            <th>MALO</th>
+                            <th>NO APLICA</th>
+                        </tr>
+                        <!--Fila de Luces.-->
+                        <tr>
+                            <!--Casilla de Luces.-->
+                            <td><label>Luces</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_luces_bueno" value="bueno" name="estado_luces" required></td>
+                            <td><input type="radio" id="estado_luces_malo" value="malo" name="estado_luces" required></td>
+                            <td><input type="radio" id="estado_luces_no_aplica" value="no_aplica" name="estado_luces" required></td>
+                        </tr>
+                        <!--Fila de Luces Perimetrales.-->
+                        <tr>
+                            <!--Casilla de Luces Perimetrales.-->
+                            <td><label>Luces Perimetrales.</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_luces_perim_bueno" value="bueno" name="estado_luces_perim" required></td>
+                            <td><input type="radio" id="estado_luces_perim_malo" value="malo" name="estado_luces_perim" required></td>
+                            <td><input type="radio" id="estado_luces_perim_no_aplica" value="no_aplica" name="estado_luces_perim" required></td>
+                        </tr>
+                        <!--Fila de Licuadora.-->
+                        <tr>
+                            <!--Casilla de Licuadora.-->
+                            <td><label>Licuadora</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_licuadora_bueno" value="bueno" name="estado_licuadora" required></td>
+                            <td><input type="radio" id="estado_licuadora_malo" value="malo" name="estado_licuadora" required></td>
+                            <td><input type="radio" id="estado_licuadora_no_aplica" value="no_aplica" name="estado_licuadora" required></td>
+                        </tr>
+                        <!--Fila Tablero de Control.-->
+                        <tr>
+                            <!--Casilla de Tablero de Control.-->
+                            <td><label>Tablero de Control</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_tablero_bueno" value="bueno" name="estado_tablero" required></td>
+                            <td><input type="radio" id="estado_tablero_malo" value="malo" name="estado_tablero" required></td>
+                            <td><input type="radio" id="estado_tablero_no_aplica" value="no_aplica" name="estado_tablero" required></td>
+                        </tr>
+                        <!--Fila de Camara.-->
+                        <tr>
+                            <!--Casilla de Camara.-->
+                            <td><label>Camara</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_camara_bueno" value="bueno" name="estado_camara" required></td>
+                            <td><input type="radio" id="estado_camara_malo" value="malo" name="estado_camara" required></td>
+                            <td><input type="radio" id="estado_camara_no_aplica" value="no_aplica" name="estado_camara" required></td>
+                        </tr>
+                        <!--Fila de Cargador de la Camara.-->
+                        <tr>
+                            <!--Casilla de Cargador de Camara.-->
+                            <td><label>Cargador de la Camara</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_carg_camara_bueno" value="bueno" name="estado_carg_camara" required></td>
+                            <td><input type="radio" id="estado_carg_camara_malo" value="malo" name="estado_carg_camara" required></td>
+                            <td><input type="radio" id="estado_carg_camara_no_aplica" value="no_aplica" name="estado_carg_camara" required></td>
+                        </tr>
+                        <!--Fila de Pantalla del Visualizador de la Camara.-->
+                        <tr>
+                            <!--Casilla de Pantalla del Visualizador de la Camara.-->
+                            <td><label>Pantalla del Visualizador de la Camara</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_visualizador_cam_bueno" value="bueno" name="estado_visualizador_cam" required></td>
+                            <td><input type="radio" id="estado_visualizador_cam_malo" value="malo" name="estado_visualizador_cam" required></td>
+                            <td><input type="radio" id="estado_visualizador_cam_no_aplica" value="no_aplica" name="estado_visualizador_cam" required></td>
+                        </tr>
+                        <!--Fila de Parada de Emergencia.-->
+                        <tr>
+                            <!--Casilla de Parada de Emergencia.-->
+                            <td><label>Parada de Emergencia</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_parada_emerg_bueno" value="bueno" name="estado_parada_emerg" required></td>
+                            <td><input type="radio" id="estado_parada_emerg_malo" value="malo" name="estado_parada_emerg" required></td>
+                            <td><input type="radio" id="estado_parada_emerg_no_aplica" value="no_aplica" name="estado_parada_emerg" required></td>
+                        </tr>
+                        <!--Fila de Codigo de Error.-->
+                        <tr>
+                            <!--Casilla de Codigo de Error.-->
+                            <td><label>Codigo de Error</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_cod_error_bueno" value="bueno" name="estado_cod_error" required></td>
+                            <td><input type="radio" id="estado_cod_error_malo" value="malo" name="estado_cod_error" required></td>
+                            <td><input type="radio" id="estado_cod_error_no_aplica" value="no_aplica" name="estado_cod_error" required></td>
+                        </tr>
+                        <!--Fila de Control de Velocidad.-->
+                        <tr>
+                            <!--Casilla de Control de Velocidad.-->
+                            <td><label>Control de Velocidad</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_control_vel_bueno" value="bueno" name="estado_control_vel" required></td>
+                            <td><input type="radio" id="estado_control_vel_malo" value="malo" name="estado_control_vel" required></td>
+                            <td><input type="radio" id="estado_control_vel_no_aplica" value="no_aplica" name="estado_control_vel" required></td>
+                        </tr>
+                        <!--Fila de Pedales.-->
+                        <tr>
+                            <!--Casilla de Pedales.-->
+                            <td><label>Pedales</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_pedales_bueno" value="bueno" name="estado_pedales" required></td>
+                            <td><input type="radio" id="estado_pedales_malo" value="malo" name="estado_pedales" required></td>
+                            <td><input type="radio" id="estado_pedales_no_aplica" value="no_aplica" name="estado_pedales" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                </section>
+                <!--Titulo de Tracción-->
+                <h3 class="titulo_tablas">Tracción</h3>
+                <!--Sección de Tracción.-->
+                <section class="contenedor_tablas">
+                    <!--Tabla de Tracción-->
+                    <table border="1">
+                        <!--Fila de Encabezado.-->
+                        <tr>
+                            <!--Encabezado de la Tabla.-->
+                            <th>CONCEPTO</th>
+                            <th>BUENO</th>
+                            <th>MALO</th>
+                            <th>NO APLICA</th>
+                        </tr>
+                        <!--Fila de Rueda Tracción.-->
+                        <tr>
+                            <!--Casilla de Rueda Tracción.-->
+                            <td><label>Rueda Tracción</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_rueda_traccion_bueno" value="bueno" name="estado_rueda_traccion" required></td>
+                            <td><input type="radio" id="estado_rueda_traccion_malo" value="malo" name="estado_rueda_traccion" required></td>
+                            <td><input type="radio" id="estado_rueda_traccion_no_aplica" value="no_aplica" name="estado_rueda_traccion" required></td>
+                        </tr>
+                        <!--Fila de Rueda Caster.-->
+                        <tr>
+                            <!--Casilla de Rueda Caster.-->
+                            <td><label>Rueda Caster</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_rueda_caster_bueno" value="bueno" name="estado_rueda_caster" required></td>
+                            <td><input type="radio" id="estado_rueda_caster_malo" value="malo" name="estado_rueda_caster" required></td>
+                            <td><input type="radio" id="estado_rueda_caster_no_aplica" value="no_aplica" name="estado_rueda_caster" required></td>
+                        </tr>
+                        <!--Fila de Ruedas de Carga.-->
+                        <tr>
+                            <!--Casilla de Ruedas de Carga.-->
+                            <td><label>Ruedas de Carga</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_rueda_carga_bueno" value="bueno" name="estado_rueda_carga" required></td>
+                            <td><input type="radio" id="estado_rueda_carga_malo" value="malo" name="estado_rueda_carga" required></td>
+                            <td><input type="radio" id="estado_rueda_carga_no_aplica" value="no_aplica" name="estado_rueda_carga" required></td>
+                        </tr>
+                        <!--Fila de Rodamientos Ruedas de Carga.-->
+                        <tr>
+                            <!--Casilla de Rodamientos Ruedas de Carga.-->
+                            <td><label>Rodamientos Ruedas de Carga</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_rod_rue_carga_bueno" value="bueno" name="estado_rod_rue_carga" required></td>
+                            <td><input type="radio" id="estado_rod_rue_carga_malo" value="malo" name="estado_rod_rue_carga" required></td>
+                            <td><input type="radio" id="estado_rod_rue_carga_no_aplica" value="no_aplica" name="estado_rod_rue_carga" required></td>
+                        </tr>
+                        <!--Fila de Pasadores (Pines, Tuercas, Seguer).-->
+                        <tr>
+                            <!--Casilla de Pasadores (Pines, Tuercas, Seguer).-->
+                            <td><label>Pasadores (Pines, Tuercas, Seguer)</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_pasadores_bueno" value="bueno" name="estado_pasadores" required></td>
+                            <td><input type="radio" id="estado_pasadores_malo" value="malo" name="estado_pasadores" required></td>
+                            <td><input type="radio" id="estado_pasadores_no_aplica" value="no_aplica" name="estado_pasadores" required></td>
+                        </tr>
+                        <!--Fila de Revestimiento.-->
+                        <tr>
+                            <!--Casilla de Revestimiento.-->
+                            <td><label>Revestimiento</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_revestimiento_bueno" value="bueno" name="estado_revestimiento" required></td>
+                            <td><input type="radio" id="estado_revestimiento_malo" value="malo" name="estado_revestimiento" required></td>
+                            <td><input type="radio" id="estado_revestimiento_no_aplica" value="no_aplica" name="estado_revestimiento" required></td>
+                        </tr>
+                        <!--Fila de Brazos de Apoyo.-->
+                        <tr>
+                            <!--Casilla de Brazos de Apoyo.-->
+                            <td><label>Brazos de Apoyo</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_brazos_apoyo_bueno" value="bueno" name="estado_brazos_apoyo" required></td>
+                            <td><input type="radio" id="estado_brazos_apoyo_malo" value="malo" name="estado_brazos_apoyo" required></td>
+                            <td><input type="radio" id="estado_brazos_apoyo_no_aplica" value="no_aplica" name="estado_brazos_apoyo" required></td>
+                        </tr>
+                        <!--Fila de Dirección.-->
+                        <tr>
+                            <!--Casilla de Dirección.-->
+                            <td><label>Dirección</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_direccion_bueno" value="bueno" name="estado_direccion" required></td>
+                            <td><input type="radio" id="estado_direccion_malo" value="malo" name="estado_direccion" required></td>
+                            <td><input type="radio" id="estado_direccion_no_aplica" value="no_aplica" name="estado_direccion" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                </section>
+                <!--Titulo de Sistema Hidráulico.-->
+                <h3 class="titulo_tablas">Sistema Hidráulico</h3>
+                <!--Sección Sistema Hidraulico.-->
+                <section class="contenedor_tablas">
+                    <!--Tabla de Sistema Hidráulico.-->
+                    <table border="1">
+                        <!--Fila Encabezado de la Tabla.-->
+                        <tr>
+                            <!--Encabezado de la Tabla..-->
+                            <th>CONCEPTO</th>
+                            <th>BUENO</th>
+                            <th>MALO</th>
+                            <th>NO APLICA</th>
+                        </tr>
+                        <!--Fila de Mangueras.-->
+                        <tr>
+                            <!--Casilla de Mangueras.-->
+                            <td><label>Mangueras</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_mangueras_bueno" value="bueno" name="estado_mangueras" required></td>
+                            <td><input type="radio" id="estado_mangueras_malo" value="malo" name="estado_mangueras" required></td>
+                            <td><input type="radio" id="estado_mangueras_no_aplica" value="no_aplica" name="estado_mangueras" required></td>
+                        </tr>
+                        <!--Fila Cilindros.-->
+                        <tr>
+                            <!--Casilla de Cilindros.-->
+                            <td><label>Cilindros</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_cilindros_bueno" value="bueno" name="estado_cilindros" required></td>
+                            <td><input type="radio" id="estado_cilindros_malo" value="malo" name="estado_cilindros" required></td>
+                            <td><input type="radio" id="estado_cilindros_no_aplica" value="no_aplica" name="estado_cilindros" required></td>
+                        </tr>
+                        <!--Fila Motor Hidráulico.-->
+                        <tr>
+                            <!--Casilla Motor Hidráulico.-->
+                            <td><label>Motor Hidráulico</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_mot_hid_bueno" value="bueno" name="estado_mot_hid" required></td>
+                            <td><input type="radio" id="estado_mot_hid_malo" value="malo" name="estado_mot_hid" required></td>
+                            <td><input type="radio" id="estado_mot_hid_no_aplica" value="no_aplica" name="estado_mot_hid" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                </section>
+                <!--Titulo Torre.-->
+                <h3 class="titulo_tablas">Torre</h3>
+                <!--Sección Torre.-->
+                <section class="contenedor_tablas">
+                    <!--Tabla de Torre.-->
+                    <table border="1">
+                        <!--Fila de Encabezado de la Tabla.-->
+                        <tr>
+                            <!--Encabezado de la Tabla.-->
+                            <th>CONCEPTO</th>
+                            <th>BUENO</th>
+                            <th>MALO</th>
+                            <th>NO APLICA</th>
+                        </tr>
+                        <!--Fila de Rejilla.-->
+                        <tr>
+                            <!--Casilla de Rejilla.-->
+                            <td><label>Rejilla</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_rejilla_bueno" value="bueno" name="estado_rejilla" required></td>
+                            <td><input type="radio" id="estado_rejilla_malo" value="malo" name="estado_rejilla" required></td>
+                            <td><input type="radio" id="estado_rejilla_no_aplica" value="no_aplica" name="estado_rejilla" required></td>
+                        </tr>
+                        <!--Fila de Pantografo.-->
+                        <tr>
+                            <!--Casilla de Pantografo.-->
+                            <td><label>Pantografo</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_pantografo_bueno" value="bueno" name="estado_pantografo" required></td>
+                            <td><input type="radio" id="estado_pantografo_malo" value="malo" name="estado_pantografo" required></td>
+                            <td><input type="radio" id="estado_pantografo_no_aplica" value="no_aplica" name="estado_pantografo" required></td>
+                        </tr>
+                        <!--Fila Horquillas/Uñas.-->
+                        <tr>
+                            <!--Casilla de Horquillas/Uñas.-->
+                            <td><label>Horquillas/Uñas</label></td>
+                             <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                             <td><input type="radio" id="estado_horquillas_bueno" value="bueno" name="estado_horquillas" required></td>
+                             <td><input type="radio" id="estado_horquillas_malo" value="malo" name="estado_horquillas" required></td>
+                             <td><input type="radio" id="estado_horquillas_no_aplica" value="no_aplica" name="estado_horquillas" required></td>
+                        </tr>
+                        <!--Fila Guias.-->
+                        <tr>
+                            <!--Casilla Guias.-->
+                            <td><label>Guias</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_guias_bueno" value="bueno" name="estado_guias" required></td>
+                            <td><input type="radio" id="estado_guias_malo" value="malo" name="estado_guias" required></td>
+                            <td><input type="radio" id="estado_guias_no_aplica" value="no_aplica" name="estado_guias" required></td>
+                        </tr>
+                        <!--Fila de Rodamientos.-->
+                        <tr>
+                            <!--Casilla de Rodamientos.-->
+                            <td><label>Rodamientos</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_rodamientos_bueno" value="bueno" name="estado_rodamientos" required></td>
+                            <td><input type="radio" id="estado_rodamientos_malo" value="malo" name="estado_rodamientos" required></td>
+                            <td><input type="radio" id="estado_rodamientos_no_aplica" value="no_aplica" name="estado_rodamientos" required></td>
+                        </tr>
+                        <!--Fila de Pasadores.-->
+                        <tr>
+                            <!--Casilla de Pasadores.-->
+                            <td><label>Pasadores</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_pasadores_bueno" value="bueno" name="estado_pasadores" required></td>
+                            <td><input type="radio" id="estado_pasadores_malo" value="malo" name="estado_pasadores" required></td>
+                            <td><input type="radio" id="estado_pasadores_no_aplica" value="no_aplica" name="estado_pasadores" required></td>
+                        </tr>
+                        <!--Fila Graseras.-->
+                        <tr>
+                            <!--Casilla Graseras.-->
+                            <td><label>Graseras</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_graseras_bueno" value="bueno" name="estado_graseras" required></td>
+                            <td><input type="radio" id="estado_graseras_malo" value="malo" name="estado_graseras" required></td>
+                            <td><input type="radio" id="estado_graseras_no_aplica" value="no_aplica" name="estado_graseras" required></td>
+                        </tr>
+                        <!--Fila Tornilleria.-->
+                        <tr>
+                            <!--Casilla Tornilleria.-->
+                            <td><label>Tornilleria</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_tornilleria_bueno" value="bueno" name="estado_tornilleria" required></td>
+                            <td><input type="radio" id="estado_tornilleria_malo" value="malo" name="estado_tornilleria" required></td>
+                            <td><input type="radio" id="estado_tornilleria_no_aplica" value="no_aplica" name="estado_tornilleria" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                </section>
+                <!--Titulo Bateria.-->
+                <h3 class="titulo_tablas">Bateria</h3>
+                <!--Sección de Bateria.-->
+                <section class="contenedor_tablas">
+                    <!--Tabla de Bateria-->
+                    <table border="1">
+                        <!--Fila de Encabezado.-->
+                        <tr>
+                            <!--Encabezado.-->
+                            <th>CONCEPTO</th>
+                            <th>BUENO</th>
+                            <th>MALO</th>
+                            <th>NO APLICA</th>
+                        </tr>
+                        <!--Fila de Estado General.-->
+                        <tr>
+                            <!--Casilla de Estado General.-->
+                            <td><label>Estado General</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_bateria_bueno" value="bueno" name="estado_bateria" required></td>
+                            <td><input type="radio" id="estado_bateria_malo" value="malo" name="estado_bateria" required></td>
+                            <td><input type="radio" id="estado_bateria_no_aplica" value="no_aplica" name="estado_bateria" required></td>
+                        </tr>
+                        <!--Fila Cables de Conexión.-->
+                        <tr>
+                            <!--Casilla de Cables de Conexión-->
+                            <td><label>Cables de Conexión</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_cables_bueno" value="bueno" name="estado_cables" required></td>
+                            <td><input type="radio" id="estado_cables_malo" value="malo" name="estado_cables" required></td>
+                            <td><input type="radio" id="estado_cables_no_aplica" value="no_aplica" name="estado_cables" required></td>
+                        </tr>
+                        <!--Fila de Conector.-->
+                        <tr>
+                            <!--Casilla de Conector.-->
+                            <td><label>Conector</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_conector_bueno" value="bueno" name="estado_conector" required></td>
+                            <td><input type="radio" id="estado_conector_malo" value="malo" name="estado_conector" required></td>
+                            <td><input type="radio" id="estado_conector_no_aplica" value="no_aplica" name="estado_conector" required></td>
+                        </tr>
+                        <!--Fila de Borne.-->
+                        <tr>
+                            <!--Casilla de Borne.-->
+                            <td><label>Borne</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_borne_bueno" value="bueno" name="estado_borne" required></td>
+                            <td><input type="radio" id="estado_borne_malo" value="malo" name="estado_borne" required></td>
+                            <td><input type="radio" id="estado_borne_no_aplica" value="no_aplica" name="estado_borne" required></td>
+                        </tr>
+                        <!--Fila de Tapon Celdas.-->
+                        <tr>
+                            <!--Casilla de Tapon Celdas.-->
+                            <td><label>Tapon Celdas</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_tap_celdas_bueno" value="bueno" name="estado_tap_celdas" required></td>
+                            <td><input type="radio" id="estado_tap_celdas_malo" value="malo" name="estado_tap_celdas" required></td>
+                            <td><input type="radio" id="estado_tap_celdas_no_aplica" value="no_aplica" name="estado_tap_celdas" required></td>
+                        </tr>
+                        <!--Fila Nivel de Agua Celdas.-->
+                        <tr>
+                            <!--Casilla Nivel de Agua Celdas.-->
+                            <td><label>Nivel de Agua Celdas</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_agua_celdas_bueno" value="bueno" name="estado_agua_celdas" required></td>
+                            <td><input type="radio" id="estado_agua_celdas_malo" value="malo" name="estado_agua_celdas" required></td>
+                            <td><input type="radio" id="estado_agua_celdas_no_aplica" value="no_aplica" name="estado_agua_celdas" required></td>
+                        </tr>
+                        <!--Fila de Carga de Bateria.-->
+                        <tr>
+                            <!--Casilla de Carga de Bateria.-->
+                            <td><label>Carga de Bateria</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_carga_bat_bueno" value="bueno" name="estado_carga_bat" required></td>
+                            <td><input type="radio" id="estado_carga_bat_malo" value="malo" name="estado_carga_bat" required></td>
+                            <td><input type="radio" id="estado_carga_bat_no_aplica" value="no_aplica" name="estado_carga_bat" required></td>
+                        </tr>
+                        <!--Fila de Cofre.-->
+                        <tr>
+                            <!--Casilla de Cofre.-->
+                            <td><label>Cofre</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_cofre_bueno" value="bueno" name="estado_cofre" required></td>
+                            <td><input type="radio" id="estado_cofre_malo" value="malo" name="estado_cofre" required></td>
+                            <td><input type="radio" id="estado_cofre_no_aplica" value="no_aplica" name="estado_cofre" required></td>
+                        </tr>
+                        <!--Fila de Pintura Bateria.-->
+                        <tr>
+                            <!--Casilla de Pintura Bateria.-->
+                            <td><label>Pintura Bateria</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_pintura_bateria_bueno" value="bueno" name="estado_pintura_bateria" required></td>
+                            <td><input type="radio" id="estado_pintura_bateria_malo" value="malo" name="estado_pintura_bateria" required></td>
+                            <td><input type="radio" id="estado_pintura_bateria_no_aplica" value="no_aplica" name="estado_pintura_bateria" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                </section>
+                <!--Titulo Cargador de Bateria.-->
+                <h3 class="titulo_tablas">Cargador de Bateria</h3>
+                <!--Sección de Cargador de Bateria-->
+                <section class="contenedor_tablas">
+                    <!--Tabla Cargador de Bateria.-->
+                    <table border="1">
+                        <!--Fila de Encabezado.-->
+                        <tr>
+                            <!--Encabezado de la Tabla.-->
+                            <th>CONCEPTO</th>
+                            <th>BUENO</th>
+                            <th>MALO</th>
+                            <th>NO APLICA</th>
+                        </tr>
+                        <!--Fila de Estado General.-->
+                        <tr>
+                            <!--Casilla de Estado General.-->
+                            <td><label>Estado General</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_cargador_bueno" value="bueno" name="estado_cargador" required></td>
+                            <td><input type="radio" id="estado_cargador_malo" value="malo" name="estado_cargador" required></td>
+                            <td><input type="radio" id="estado_cargador_no_aplica" value="no_aplica" name="estado_cargador" required></td>
+                        </tr>
+                        <!--Fila de Estructura.-->
+                        <tr>
+                            <!--Casilla de Estructura.-->
+                            <td><label>Estructura</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_estructura_bueno" value="bueno" name="estado_estructura" required></td>
+                            <td><input type="radio" id="estado_estructura_malo" value="malo" name="estado_estructura" required></td>
+                            <td><input type="radio" id="estado_estructura_no_aplica" value="no_aplica" name="estado_estructura" required></td>
+                        </tr>
+                        <!--Fila de Cables de Conexión.-->
+                        <tr>
+                            <!--Casilla de Cables de Conexión.-->
+                            <td><label>Cables de Conexión</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_cables_bat_bueno" value="bueno" name="estado_cables_bat" required></td>
+                            <td><input type="radio" id="estado_cables_bat_malo" value="malo" name="estado_cables_bat" required></td>
+                            <td><input type="radio" id="estado_cables_bat_no_aplica" value="no_aplica" name="estado_cables_bat" required></td>
+                        </tr>
+                        <!--Fila de Conector de Cargador.-->
+                        <tr>
+                            <!--Casilla de Conector de Cargador.-->
+                            <td><label>Conector</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_conector_car_bueno" value="bueno" name="estado_conector_car" required></td>
+                            <td><input type="radio" id="estado_conector_car_malo" value="malo" name="estado_conector_car" required></td>
+                            <td><input type="radio" id="estado_conector_car_no_aplica" value="no_aplica" name="estado_conector_car" required></td>
+                        </tr>
+                        <!--Fila de Display.-->
+                        <tr>
+                            <!--Campo de Display.-->
+                            <td><label>Display</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_display_bueno" value="bueno" name="estado_display" required></td>
+                            <td><input type="radio" id="estado_display_malo" value="malo" name="estado_display" required></td>
+                            <td><input type="radio" id="estado_display_no_aplica" value="no_aplica" name="estado_display" required></td>
+                        </tr>
+                        <!--Fila de Codigo de Error de Cargador.-->
+                        <tr>
+                            <!--Campo de Codigo de Error.-->
+                            <td><label>Codigo de Error</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_cod_error_carg_bueno" value="bueno" name="estado_cod_error_carg" required></td>
+                            <td><input type="radio" id="estado_cod_error_carg_malo" value="malo" name="estado_cod_error_carg" required></td>
+                            <td><input type="radio" id="estado_cod_error_carg_no_aplica" value="no_aplica" name="estado_cod_error_carg" required></td>
+                        </tr>
+                        <!--Fila de Cable de Alimentación.-->
+                        <tr>
+                            <!--Campo Cable de Alimentación.-->
+                            <td><label>Cable de Alimentación</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_cable_alim_bueno" value="bueno" name="estado_cable_alim" required></td>
+                            <td><input type="radio" id="estado_cable_alim_malo" value="malo" name="estado_cable_alim" required></td>
+                            <td><input type="radio" id="estado_cable_alim_no_aplica" value="no_aplica" name="estado_cable_alim" required></td>
+                        </tr>
+                        <!--Fila de Clavija.-->
+                        <tr>
+                            <!--Campo de Clavija.-->
+                            <td><label>Clavija</label></td>
+                            <!--Botones de Selección. BUENO // MALO // NO APLICA.-->
+                            <td><input type="radio" id="estado_clavija_bueno" value="bueno" name="estado_clavija" required></td>
+                            <td><input type="radio" id="estado_clavija_malo" value="malo" name="estado_clavija" required></td>
+                            <td><input type="radio" id="estado_clavija_no_aplica" value="no_aplica" name="estado_clavija" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                </section> 
+                <!--Titulo Alarma.-->
+                <h3 class="titulo_tablas">Alarma</h3>               
+                <!--Sección de Alarma.-->
+                <section class="contenedor_tablas">
+                    <!--Tabla de Alarma.-->
+                    <table border="1">
+                        <!--Fila de Encabezado.-->
+                        <tr>
+                            <!--Encabezado de Tabla de Alarma.-->
+                            <th>CONCEPTO</th>
+                            <th>BUENO</th>
+                            <th>MALO</th>
+                            <th>NO APLICA</th>
+                        </tr>
+                        <!--Fila de Alarma de Reversa.-->
+                        <tr>
+                            <td><label>Alarma de Reversa</label></td>
+                            <td><input type="radio" id="estado_alarma_reversa_bueno" value="bueno" name="estado_alarma_reversa" required></td>
+                            <td><input type="radio" id="estado_alarma_reversa_malo" value="malo" name="estado_alarma_reversa" required></td>
+                            <td><input type="radio" id="estado_alarma_reversa_no_aplica" value="no_aplica" name="estado_alarma_reversa" required></td>
+                        </tr>
+                    </table>
+                    <br>
+                </section>
+                <div id="contenedor_boton">
+                    <button type="submit" id="boton_form">Enviar Formulario</button>
+                </div>
+            </form>
+        </main>
+    </body>
+</html>
