@@ -141,6 +141,9 @@ table{
     .division_vehiculo {
         flex: 1 1 100%; /* Cada sección ocupará el 45% del ancho del contenedor */
     }
+    form{
+        margin: auto;
+    }
     .titulo_tablas{
         padding: 20px;
     }
