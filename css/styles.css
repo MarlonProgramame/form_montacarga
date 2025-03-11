@@ -59,12 +59,31 @@ form{
     padding-bottom: 6%;
 }
 .padding_2_titulo{
+    padding: 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color:#b83434d8;
+    border-radius: 8px;
+    color: white;
     text-align: center;
-    padding: 10px;
 }
+
 .input_2{
     padding: 20px;
     text-align: center;
+}
+
+.cont_tit_tablas{
+    padding: 5px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color:#b83434d8;
+    border-radius: 8px;
+    color: white;
 }
 input {
     border-color: black;
@@ -82,10 +101,8 @@ th, td{
     padding: 5px;
     border-bottom: 1px solid #999595;
 }
-table{
+table {
     width: 100%;
-    margin: auto;
-    
     border-collapse: collapse;
     border-color: #ffffff;
 }
@@ -103,6 +120,8 @@ table{
     box-sizing: border-box;
 }  
 .contenedor_tablas{
+    margin-left: 14%;
+    margin-right: 14%;
     padding: 20px;
 }
 .titulo_tablas{
@@ -128,6 +147,10 @@ table{
     background-color: #4f51d6;
     box-shadow: 0 5px #666;
     transform: translateY(4px);
+}
+input[type="radio"] {
+    display: block; /* Hace que el radio sea un bloque */
+    margin: 0 auto; /* Centra el radio horizontalmente */
 }
 @media screen and (max-width: 768px) {
     .padding_input{
